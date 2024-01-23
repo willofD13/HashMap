@@ -1,1 +1,1 @@
-# HashMap
+Implementation of HashMap data structure.
