@@ -16,13 +16,15 @@ class LinkedList
         @head = Node.new(key,value) 
     end
 
-    def append(value)
+    def append(key, value)
         node_to_add = head 
 
         while node_to_add.next !=nil 
             node_to_add = node_to_add.next 
         end 
 
-        node_to_add.next = Node.new(value)
+        node_to_add.next = Node.new(key, value)
     end
+
+    def find)
 end
