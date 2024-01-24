@@ -24,10 +24,10 @@ class LinkedList
         node = head
 
         if node.key == key 
-            node.value = value
+            node.value = value #replace the value of an existing key
         else
             if node.next.nil?
-                append(node,key,value)
+                append(node,key,value) # add a new node if the key doesn't exist
             end
             node = node.next
         end
