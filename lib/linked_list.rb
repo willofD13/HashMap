@@ -16,14 +16,20 @@ class LinkedList
         @head = Node.new(key,value) 
     end
 
-    def append(key, value)
-        node_to_add = head 
-
-        while node_to_add.next !=nil 
-            node_to_add = node_to_add.next 
-        end 
-
-        node_to_add.next = Node.new(key, value)
+    def append(node,key,value)
+        node.next = Node.new(key,value)
     end
 
+    def traverse(key, value)
+        node = head
+
+        if node.key == key 
+            node.value = value
+        else
+            if node.next.nil?
+                append(node,key,value)
+            end
+            node = node.next
+        end
+    end
 end
