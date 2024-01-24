@@ -29,9 +29,20 @@ class HashMap
         end
     end
 
+    def get(key)
+        index = hash(key)
+        if buckets[index].nil?
+            nil
+        else
+            node = buckets[index].find(key)
+            node.value
+        end
+    end
+
+        
+
 end
 
 h = HashMap.new 
 h.set('leon',30)
-h.set('leon',31)
-p h.buckets
+p h.get('leon')
