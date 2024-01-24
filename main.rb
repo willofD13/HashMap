@@ -1,8 +1,8 @@
 class HashMap 
-    attr_accessor :hash_table
+    attr_accessor :buckets
 
     def initialize
-        @hash_table = Array.new(16)
+        @buckets = Array.new(16)
     end
 
     def hash(string)
@@ -13,7 +13,7 @@ class HashMap
 
         hash_code
 
-        index = hash_code % @hash_table.size
+        index = hash_code % @buckets.size
         index
     end
 end
