@@ -39,4 +39,18 @@ class LinkedList
         end
     end
 
+    
+    def find(key)
+        node = head
+
+        until node.nil? do
+            if node.key == key
+                break
+            else
+                node = node.next
+            end
+        end
+
+        node
+    end
 end
