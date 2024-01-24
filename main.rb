@@ -1,3 +1,10 @@
+class Node 
+    def initialize(key,value)
+        @key = key 
+        @value = value 
+    end
+end
+
 class HashMap 
     attr_accessor :hash_table
 
@@ -16,4 +23,4 @@ class HashMap
         index = hash_code % @hash_table.size
         index
     end
-end 
+
