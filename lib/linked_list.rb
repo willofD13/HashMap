@@ -28,9 +28,11 @@ class LinkedList
         node = head
         until node.nil? do
             if node.key != key && node.next.nil?
-                append(node,key,value) #replace the value of an existing key
+                append(node,key,value)
+                break
             elsif node.key == key
-                replace_value(key,value)
+                replace_value(node,value)
+                break
             else
                 node = node.next
             end
