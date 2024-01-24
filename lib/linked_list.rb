@@ -26,5 +26,4 @@ class LinkedList
         node_to_add.next = Node.new(key, value)
     end
 
-    def find)
 end

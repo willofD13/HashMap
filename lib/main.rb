@@ -1,3 +1,4 @@
+require '../lib/linked_list'
 class HashMap 
     attr_accessor :buckets
 
@@ -16,4 +17,5 @@ class HashMap
         index = hash_code % @buckets.size
         index
     end
+
 end
