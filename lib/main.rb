@@ -39,10 +39,14 @@ class HashMap
         end
     end
 
-        
+    def key?(key)
+        index = hash(key)
+        return false if buckets[index].nil?
+        return true if buckets[index].find(key)
+    end
 
 end
 
 h = HashMap.new 
 h.set('leon',30)
-p h.get('leon')
+p h.key?('penny')
