@@ -26,14 +26,17 @@ class LinkedList
 
     def traverse(key, value)
         node = head
-
-        if node.key == key 
-            replace_value(node,value) #replace the value of an existing key
-        else
-            if node.next.nil?
-                append(node,key,value) # add a new node if the key doesn't exist
+        until node.nil? do
+            if node.key == key 
+                replace_value(node,value) #replace the value of an existing key
+            else
+                if node.next.nil?
+                    append(node,key,value) # add a new node if the key doesn't exist
+                    break
+                end
+                node = node.next
             end
-            node = node.next
         end
     end
+
 end
