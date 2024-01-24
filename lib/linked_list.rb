@@ -45,12 +45,12 @@ class LinkedList
 
         until node.nil? do
             if node.key == key
-                break
+                return node
             else
                 node = node.next
             end
         end
 
-        node
+        nil
     end
 end
